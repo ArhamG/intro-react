@@ -10,6 +10,7 @@ class App extends React.Component {
     this.state = {
       buttonClicked: "",
       assignments: [] /*Below this line, add the students state variable*/,
+      students: [],
       grades: {}
     };
 
@@ -62,16 +63,16 @@ class App extends React.Component {
 
     /* Change below to render students*/
 
-    // if (this.state.buttonClicked === "students") {
-    //   tabChoice = (
-    //     <List
-    //       placeholder="Add Assignment..." 
-    //       currList={this.state.assignments}
-    //       addFunction={this.addAssignment}
-    //       title="Student Roster"
-    //     />
-    //   );
-    // }
+    if (this.state.buttonClicked === "students") {
+      tabChoice = (
+        <List
+          placeholder="Add Assignment..." 
+          currList={this.state.assignments}
+          addFunction={this.addAssignment}
+          title="Student Roster"
+        />
+      );
+    }
 
   //   /* Uncomment lines below to render grades*/
   // if (this.state.buttonClicked === "grades") {
