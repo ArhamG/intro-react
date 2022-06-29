@@ -40,7 +40,7 @@ class App extends React.Component {
     });
   }
   addGrade(assignment, student, score) {
-    let grades = this.state.grades;
+    let grades = this.state.grades; 
     let assignmentName = assignment;
     let studentName = student;
     if (!(assignment in grades)) {
